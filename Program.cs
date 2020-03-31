@@ -12,12 +12,91 @@ namespace GcodeParse
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Hello World!");
+            GcodeRead gr = new GcodeRead();
+            //GcodeWrite gw = new GcodeWrite();
+            //gw.Gcodewrite();
+            Console.WriteLine(gr.Read());
+            string olines;
+            olines = gr.Read();
+
+            
+            string[] lines = { "first line", "second line", "third line", "第四行" };
+            File.WriteAllLines(@"D:/code/MotionControl/GcodeParse/outputcode.txt", lines, Encoding.UTF8);
+            File.WriteAllText(@"D:/code/MotionControl/GcodeParse/outputcode2.txt", olines, Encoding.UTF8);
+
+            // Console.WriteLine(gr.ToString());
             Console.ReadLine();
+
         }
-        foreach
+
+        
 	
     }
+
+    class GcodeRead
+    {
+        public string Read()
+        {
+            string abc="aaaa";
+            string line;
+            try
+            {
+                
+                using (StreamReader sr = new StreamReader("D:/code/MotionControl/GcodeParse/codeTest.txt"))
+                {
+                    //String 
+                    line = sr.ReadToEnd();
+                    
+                    //nline = line;
+                    //Console.WriteLine(line);
+                    return line;
+                }
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+
+            }
+            //abc = line;
+            //return line;
+            return abc;
+        }
+    }
+    /*
+    class GcodeWrite
+    {
+        public void Gcodewrite()
+        {
+            // Set a variable to the My Documents path.
+            string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            StringBuilder sb = new StringBuilder();
+
+            // Enumerate the files in the My Documents path, filtering for text files only.
+            foreach (string txtName in Directory.EnumerateFiles(mydocpath, "walletest.txt"))
+            {
+                // Open a stream reader and write the name of the file, a visual separator, 
+                // and the contents of the file to the stream.
+                using (StreamReader sr = new StreamReader(txtName))
+                {
+                    sb.AppendLine(txtName);
+                    sb.AppendLine("= = = = = =");
+                    sb.Append(sr.ReadToEnd());
+                    sb.AppendLine();
+                    sb.AppendLine();
+                }
+            }
+            // Write the stream contents to a new file named "AllTxtFiles.txt".
+            using (StreamWriter outfile = new StreamWriter(mydocpath + @"\AllTxtFiles.txt"))
+            {
+                outfile.Write(sb.ToString());
+            }
+        }
+
+    }*/
 
 }
 
