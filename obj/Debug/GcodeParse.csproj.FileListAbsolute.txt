@@ -1,0 +1,7 @@
+D:\Code\10. MotionController\SMC_600Test\GcodeParse\bin\Debug\GcodeParse.exe.config
+D:\Code\10. MotionController\SMC_600Test\GcodeParse\bin\Debug\GcodeParse.exe
+D:\Code\10. MotionController\SMC_600Test\GcodeParse\bin\Debug\GcodeParse.pdb
+D:\Code\10. MotionController\SMC_600Test\GcodeParse\obj\Debug\GcodeParse.csprojAssemblyReference.cache
+D:\Code\10. MotionController\SMC_600Test\GcodeParse\obj\Debug\GcodeParse.csproj.CoreCompileInputs.cache
+D:\Code\10. MotionController\SMC_600Test\GcodeParse\obj\Debug\GcodeParse.exe
+D:\Code\10. MotionController\SMC_600Test\GcodeParse\obj\Debug\GcodeParse.pdb
